@@ -1,0 +1,16 @@
+"Brief project description"
+
+module(
+    name = "projectname",
+    version = "1.0.0",
+    compatibility_level = 1,
+)
+
+bazel_dep(name = "googletest", version = "1.14.0", repo_name = "gtest")
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True, repo_name = "sync")
+
+git_override(
+    module_name = "hedron_compile_commands",
+    remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git",
+    commit = "ceeb5dbdefb8839a1e29cc242bc1fe755a43609c",
+)

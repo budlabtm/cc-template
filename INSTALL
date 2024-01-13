@@ -1,0 +1,10 @@
+# Installation
+
+## Windows
+Follow the directions at the link for running Bazel on Windows: https://bazel.build/install/windows
+
+## Linux
+Follow the directions at the link for running Bazel on Ubuntu Linux: https://bazel.build/install
+
+## macOS
+Follow the directions at the link for running Bazel on macOS: https://bazel.build/install/os-x
