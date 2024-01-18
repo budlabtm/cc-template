@@ -4,10 +4,13 @@ build:
 	@bazel build //...
 	@mv -f bazel-bin/* bin/
 
-package:
+.PHONY: run
+run: build
+	@bazel run //:app
 
+.PHONY: test
 test:
-	@bazel test //...
+	@bazel test --test_output=all //test/...
 
 docs:
 	@doxygen Doxyfile
@@ -17,3 +20,4 @@ clean:
 	@rm -rf bin/*
 	@rm -rf docs/*
 	@rm -rf lib/*
+	@rm -rf external

@@ -7,8 +7,8 @@ module(
 )
 
 bazel_dep(name = "googletest", version = "1.14.0", repo_name = "gtest")
-bazel_dep(name = "hedron_compile_commands", dev_dependency = True, repo_name = "sync")
 
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True, repo_name = "sync")
 git_override(
     module_name = "hedron_compile_commands",
     remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git",
